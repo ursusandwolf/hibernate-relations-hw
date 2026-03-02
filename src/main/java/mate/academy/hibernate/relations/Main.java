@@ -10,6 +10,9 @@ import mate.academy.hibernate.relations.service.MovieService;
 import mate.academy.hibernate.relations.util.HibernateUtil;
 import org.hibernate.SessionFactory;
 
+/**
+ * init git
+ */
 public class Main {
     public static void main(String[] args) {
         // use this session factory when you will initialize service instances
