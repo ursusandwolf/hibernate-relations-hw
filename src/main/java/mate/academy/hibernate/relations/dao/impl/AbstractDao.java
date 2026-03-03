@@ -28,9 +28,12 @@ public abstract class AbstractDao<T> {
             if (transaction != null) {
                 transaction.rollback();
             }
-            throw new DataProcessingException("Can't insert movie " + entity, e);
+            throw new DataProcessingException("Can't insert entity "
+                    + clazz.getSimpleName() + " " + entity, e);
         } finally {
-            session.close();
+            if (session != null) {
+                session.close();
+            }
         }
     }
 
