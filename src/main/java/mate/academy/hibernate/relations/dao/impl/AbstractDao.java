@@ -1,13 +1,12 @@
 package mate.academy.hibernate.relations.dao.impl;
 
 import java.util.Optional;
-import jakarta.persistence.Entity;
 import mate.academy.hibernate.relations.dao.DataProcessingException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-public abstract class AbstractDao <T> {
+public abstract class AbstractDao<T> {
     protected final SessionFactory factory;
     protected final Class<T> clazz;
 

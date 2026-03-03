@@ -1,0 +1,17 @@
+package mate.academy.hibernate.relations.service.impl;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class AbstractService<T> {
+    private Map<Long, T> storage = new HashMap<>();
+
+    public T add(Long id, T entity) {
+        storage.put(id, entity);
+        return entity;
+    }
+
+    public T get(Long id) {
+        return storage.get(id);
+    }
+}
