@@ -6,6 +6,6 @@ import mate.academy.hibernate.relations.service.ActorService;
 public class ActorServiceImpl extends AbstractService<Actor> implements ActorService {
     @Override
     public Actor add(Actor actor) {
-        return super.add(actor.getId(), actor);
+        return add(actor.getId(), actor);
     }
 }
